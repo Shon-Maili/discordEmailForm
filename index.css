@@ -371,9 +371,9 @@ cursor:pointer
 
  #communityName{
     position: absolute;
-    top: 95%;
-    /* left: 61px; */
+    bottom: 0;
+ 
     color: white;
-    font-size: 30px;
+    font-size: 37px;
     font-weight: bold;
  }
