@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="index.css" rel="stylesheet">
+    <title>community form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Rubik:wght@400;500&family=Solitreo&family=Sorts+Mill+Goudy&display=swap" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="index.js"></script>
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("oRaHeLvJzf147S9V8");
+   })();
+</script>
+</head>
+<body>
+    <div id="form">
+        <div id="data">
+        <div class="inputTextDiv">
+        <label for="fullName" class="formInputLabel">שם מלא</label>
+            <input type="text" id="fullName" class="formInputText" autocomplete="off" />
+            <span class="error" order="error1"></span>
+    </div>
+    <div class="inputTextDiv">
+        <label for="email" class="formInputLabel">אימייל</label>
+            <input type="text" id="email" class="formInputText" autocomplete="off"/>
+            <span class="error" order="error2"></span>
+    </div>
+    <div class="inputTextDiv">
+        <label for="phoneNum" class="formInputLabel">טלפון</label>
+            <input type="text" id="phoneNum" class="formInputText" autocomplete="off"/>
+            <span class="error" order="error3"></span>
+    </div>
+    </div>
+    <div class="radioPrimaryDiv">
+       <label class="radioPrimaryLabel">זמן מועדף ביום</label>
+       <ul class="radioList">
+          <li class="radioListItem" id="op1">
+            <label class="radioLabel" for="morningOp">בוקר</label>
+            <img src="./images/morning.png" class="icon"/>
+            <input type="radio" id="morningOp" value="בוקר" name="times">
+          </li>
+          <li class="radioListItem" id="op2">
+            <label class="radioLabel" for="afternoonOp">צהריים</label>
+            <img src="./images/afternoon.png" class="icon"/>
+            <input type="radio" id="afternoonOp" value="צהריים" name="times">
+          </li>
+          <li class="radioListItem" id="op3">
+            <label class="radioLabel" for="eveningOp">ערב</label>
+            <img src="./images/evening.png" class="icon"/>
+            <input type="radio" id="eveningOp" value="ערב" name="times">
+          </li>
+       </ul>
+       <label for="addDetails">היערות נוספות</label>
+       <textarea id="addDetails"></textarea>
+       
+    </div>
+    <div id="sendBtn">שלח</div>
+</div>
+</body>
+
+</html>
