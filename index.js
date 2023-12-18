@@ -114,5 +114,5 @@ $(document).ready(function() {
     $("input[name='times']").prop('checked', false);
     $("#addDetails").val('');
  });
-
+ $(".formInputText").prev().animate({top:'32px' , fontSize: '28px',left:'0',opacity:'1'},200);
 });
