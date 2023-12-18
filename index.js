@@ -40,7 +40,8 @@ $(document).ready(function() {
   }
   });
   $("#email").on('blur', function() {
-    const hebrewRegex = /^[a-zA-Z]+@[a-zA-Z]+\.[a-zA-Z]+$/;
+    const hebrewRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/
+
     let currentValue = $(this).val();
 
     if (currentValue) {
@@ -113,6 +114,7 @@ $(document).ready(function() {
     $("#phoneNum").val('');
     $("input[name='times']").prop('checked', false);
     $("#addDetails").val('');
+    $(".formInputText").prev().animate({top:'32px' , fontSize: '28px',left:'0',opacity:'1'},200);
  });
- $(".formInputText").prev().animate({top:'32px' , fontSize: '28px',left:'0',opacity:'1'},200);
+
 });
