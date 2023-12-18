@@ -103,7 +103,7 @@ $(document).ready(function() {
       time: $("input[name='times']:checked").val(),
       phoneNum: $("#phoneNum").val(),
       details: $("#addDetails").val(),
-      email:$("#email").val()
+      from_email:$("#email").val()
      }
 
    emailjs.send("service_0lfqosw","template_r9an6sq",params).then(alert("!!אימייל נשלח"));
