@@ -1,5 +1,12 @@
 
 $(document).ready(function() {
+
+  function setInitialScale() {
+    const screenWidth = window.innerWidth;
+    const initialScale = screenWidth <= 522 ? 1 : 0.5; // Adjust the scale as needed
+    document.querySelector('meta[name="viewport"]').setAttribute('content', `width=device-width, initial-scale=${initialScale}`);
+  }
+
   $(".formInputText").on('focus', function() {
     $(this).prev().animate({top:'3px' , fontSize: '24px',left:'9px',opacity:'0.7'},200);
   })

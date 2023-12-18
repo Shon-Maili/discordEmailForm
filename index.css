@@ -365,11 +365,4 @@ body{
 cursor:pointer  
   }
 
-  @media (max-width: 522px) {
-    body {
-      /* Set the initial scale to 1 for screens with a width of 522px or less */
-      transform-origin: top left;
-      transform: scale(1);
-      width: 100%; /* Ensure the content takes the full width of the viewport */
-    }
-  }
+ 
