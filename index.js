@@ -1,11 +1,21 @@
 
 $(document).ready(function() {
 
-  function setInitialScale() {
-    const screenWidth = window.innerWidth;
-    const initialScale = screenWidth <= 522 ? 1 : 0.5; // Adjust the scale as needed
-    document.querySelector('meta[name="viewport"]').setAttribute('content', `width=device-width, initial-scale=${initialScale}`);
-  }
+  $(document).ready(function() {
+    // Set the initial scale based on screen width
+    function setInitialScale() {
+      const screenWidth = $(window).width();
+      const initialScale = screenWidth <= 522 ? 1 : 0.8; // Adjust the scale as needed
+      $('meta[name="viewport"]').attr('content', 'width=device-width, initial-scale=' + initialScale);
+    }
+
+    // Set the initial scale on document ready
+    setInitialScale();
+
+    // Update the scale when the window is resized
+    $(window).on('resize', setInitialScale);
+  });
+
 
   $(".formInputText").on('focus', function() {
     $(this).prev().animate({top:'3px' , fontSize: '24px',left:'9px',opacity:'0.7'},200);
