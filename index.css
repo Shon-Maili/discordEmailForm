@@ -198,7 +198,7 @@ body{
     flex-wrap: wrap;
     direction: rtl;
     position: relative;
-    bottom: 8vh;
+    top: 3vh;
     }
     .inputTextDiv{
         display: flex;
