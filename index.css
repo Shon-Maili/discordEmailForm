@@ -369,4 +369,11 @@ body{
 cursor:pointer  
   }
 
- 
+ #communityName{
+    position: absolute;
+    top: 95%;
+    /* left: 61px; */
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+ }
